@@ -1,0 +1,7 @@
+{
+    "env": {
+        "ENVIRONMENT": "development",
+        "MONGO_CONNECT": "PLACE YOUR MONGODB ATLAS CONNECTION STRING HERE",
+        "CORS_ORIGIN": "*"
+    }
+}

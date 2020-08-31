@@ -1,0 +1,12 @@
+// This did not appear to work for timeout, but maybe my problem uploading images wasn't really a timeout issue.  
+// So hiding this, but may be useful in the future.  File won't be recognized by EB without .config extension.
+container_commands:
+  change_proxy_timeout:
+    command: |
+      sed -i '/\s*location \/ {/c \
+              location / { \
+                  proxy_connect_timeout       1800;\
+                  proxy_send_timeout          1800;\
+                  proxy_read_timeout          1800;\
+                  send_timeout                1800;\
+              ' /tmp/deployment/config/#etc#nginx#conf.d#00_elastic_beanstalk_proxy.conf
